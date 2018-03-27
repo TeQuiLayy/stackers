@@ -1,0 +1,15 @@
+current directory: /Users/T_eQ_uiL_a/Desktop/environment/stackers/vendor/bundle/ruby/2.3.0/gems/bindex-0.5.0/ext/bindex
+/Users/T_eQ_uiL_a/.rbenv/versions/2.3.3/bin/ruby -r ./siteconf20180328-1328-83fa1o.rb extconf.rb
+creating Makefile
+
+current directory: /Users/T_eQ_uiL_a/Desktop/environment/stackers/vendor/bundle/ruby/2.3.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" clean
+
+current directory: /Users/T_eQ_uiL_a/Desktop/environment/stackers/vendor/bundle/ruby/2.3.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR="
+compiling cruby.c
+linking shared-object bindex/cruby.bundle
+
+current directory: /Users/T_eQ_uiL_a/Desktop/environment/stackers/vendor/bundle/ruby/2.3.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20180328-1328-4ir6mo/bindex
