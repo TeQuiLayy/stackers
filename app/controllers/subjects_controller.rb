@@ -1,5 +1,5 @@
 class SubjectsController < ApplicationController
-  before_action :set_subject, only: [:show, :edit, :update, :destroy]
+  before_action :set_subject, only: [:show, :edit, :update, :destroy, :advance]
 
   # GET /subjects
   # GET /subjects.json
@@ -14,16 +14,20 @@ class SubjectsController < ApplicationController
 
   # GET /subjects/new
   def new
+    @users = User.all
     @subject = Subject.new
   end
 
   # GET /subjects/1/edit
   def edit
+    @users = User.all
+    binding.pry
   end
 
   # POST /subjects
   # POST /subjects.json
   def create
+    @users = User.all
     @subject = Subject.new(subject_params)
 
     respond_to do |format|
@@ -61,6 +65,12 @@ class SubjectsController < ApplicationController
     end
   end
 
+  def advance
+    @subject.time += 1
+    @subject.save
+    redirect_to user_path
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_subject
@@ -69,6 +79,6 @@ class SubjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def subject_params
-      params.require(:subject).permit(:name, :time, :user_id)
+      params.require(:subject).permit(:name, :time, :user_id, :color_code)
     end
 end

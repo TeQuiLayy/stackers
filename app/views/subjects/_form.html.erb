@@ -17,13 +17,18 @@
   </div>
 
   <div class="field">
+    <%= form.label :color_code %>
+    <%= form.number_field :color_code, id: :subject_color_code %>
+  </div>
+
+  <div class="field">
     <%= form.label :time %>
     <%= form.text_field :time, id: :subject_time %>
   </div>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.number_field :user_id, id: :subject_user_id %>
+    <%= form.label :user %>
+    <%= form.select :user_id, @users.map{|t| [t.name, t.id]} %>
   </div>
 
   <div class="actions">
