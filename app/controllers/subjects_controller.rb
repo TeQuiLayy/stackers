@@ -68,7 +68,7 @@ class SubjectsController < ApplicationController
   def advance
     @subject.time += 1
     @subject.save
-    redirect_to user_path
+    redirect_to user_path(@subject.user_id)
   end
 
   private
